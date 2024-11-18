@@ -36,11 +36,26 @@ affecting the global Python installation or other environments.
 Here we use conda to create a virtual enviroment.
 
     Open terminal or anaconda prompt
-
-Then type the following.
+    
+Then type the following to create conda enviroment.
 
     conda create -n allen python=3.9
     conda activate allen
     pip install allensdk
     pip install ipykernel
     conda install jupyter
+    
+## Note on Conda Channel Configuration
+
+To ensure compliance with license agreements, the default Conda channels will not be used. Instead, packages will be installed exclusively from the Conda-Forge channel. This configuration minimizes the risk of potential licensing violations and ensures the availability of openly licensed packages.
+
+For details: https://dev.to/kaamisan/using-miniconda-with-conda-forge-to-avoid-anaconda-licensing-issues-5hkj
+
+Make sure to configure your Conda environment as follows:
+
+    conda config --show channels
+    conda config --add channels conda-forge
+    conda config --remove channels defaults
+    conda config --set channel_priority strict
+    conda config --show channels
+
