@@ -51,7 +51,7 @@ To ensure compliance with license agreements, the default Conda channels will no
 
 For details: https://dev.to/kaamisan/using-miniconda-with-conda-forge-to-avoid-anaconda-licensing-issues-5hkj
 
-Make sure to configure your Conda environment as follows:
+Make sure to set your Conda environment before making enviroments as follows:
 
     conda config --show channels
     conda config --add channels conda-forge
